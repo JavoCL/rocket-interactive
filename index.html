@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Interactive | Next Generation Assets</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Paleta de Colores */
+        :root {
+            --deep-space: #0B0F19;
+            --neon-crimson: #F43F5E;
+            --cosmic-purple: #8B5CF6;
+            --electric-blue: #0EA5E9;
+            --text-light: #F8FAFC;
+            --text-muted: #94A3B8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--deep-space);
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navegación Superior */
+        header {
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo-text span {
+            color: var(--neon-crimson);
+        }
+
+        /* Sección Principal (Hero) */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            /* Brillo sutil de fondo inspirado en las interfaces sci-fi */
+            background: radial-gradient(circle at center, rgba(139, 92, 246, 0.08) 0%, rgba(11, 15, 25, 0) 60%);
+        }
+
+        .hero-logo {
+            margin-bottom: 2rem;
+            width: 140px;
+            height: 140px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        h1 span {
+            color: var(--neon-crimson);
+        }
+
+        p.description {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+
+        .cta-button {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--neon-crimson);
+            padding: 1rem 2.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background-color: var(--neon-crimson);
+            box-shadow: 0 0 20px rgba(244, 63, 94, 0.4);
+        }
+
+        /* Animación suave para el cohete */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Responsividad básica */
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            p.description { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 10 L85 70 L50 58 L15 70 Z" fill="url(#gradHeader)"/>
+                <path d="M35 75 L50 95 L65 75 L50 63 Z" fill="#0EA5E9"/>
+                <circle cx="50" cy="50" r="6" fill="#0B0F19" stroke="#0EA5E9" stroke-width="2.5"/>
+                <defs>
+                    <linearGradient id="gradHeader" x1="50" y1="10" x2="50" y2="70" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#F43F5E" />
+                        <stop offset="100%" stop-color="#8B5CF6" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <div class="logo-text">Rocket<span>Interactive</span></div>
+        </div>
+    </header>
+
+    <main>
+        <svg class="hero-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 10 L85 70 L50 58 L15 70 Z" fill="url(#gradMain)"/>
+            <path d="M35 75 L50 95 L65 75 L50 63 Z" fill="#0EA5E9"/>
+            <circle cx="50" cy="50" r="6" fill="#0B0F19" stroke="#0EA5E9" stroke-width="2.5"/>
+            <defs>
+                <linearGradient id="gradMain" x1="50" y1="10" x2="50" y2="70" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#F43F5E" />
+                    <stop offset="100%" stop-color="#8B5CF6" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <h1>Rocket<span>Interactive</span></h1>
+        
+        <p class="description">
+            Empowering creators and studios with next-generation tools and high-quality assets. We reduce development time without sacrificing your artistic vision.
+        </p>
+
+        <a href="#tools" class="cta-button">Level Up Your Game</a>
+    </main>
+
+</body>
+</html>
